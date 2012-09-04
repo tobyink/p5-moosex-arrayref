@@ -4,3 +4,9 @@
 	issued  2012-09-04;
 	label   "Initial release".
 
+`MooseX-ArrayRef 0.002 cpan:TOBYINK`
+	issued  2012-09-04;
+	changeset [
+		item "List 'Moose 2.00' as a dependency."^^Packaging;
+	]
+

@@ -2,7 +2,7 @@ package MooseX::ArrayRef::Meta::Instance;
 
 BEGIN {
 	$MooseX::ArrayRef::Meta::Instance::AUTHORITY = 'cpan:TOBYINK';
-	$MooseX::ArrayRef::Meta::Instance::VERSION   = '0.001';
+	$MooseX::ArrayRef::Meta::Instance::VERSION   = '0.002';
 }
 
 use Moose::Role;
