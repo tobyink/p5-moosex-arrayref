@@ -8,5 +8,5 @@
 	issued  2012-09-04;
 	changeset [
 		item "List 'Moose 2.00' as a dependency."^^Packaging;
-	]
+	].
 
