@@ -2,16 +2,10 @@ package MooseX::ArrayRef::Meta::Class;
 
 BEGIN {
 	$MooseX::ArrayRef::Meta::Class::AUTHORITY = 'cpan:TOBYINK';
-	$MooseX::ArrayRef::Meta::Class::VERSION   = '0.003';
+	$MooseX::ArrayRef::Meta::Class::VERSION   = '0.004';
 }
 
 use Moose::Role;
-
-#has slot_to_index_map => (
-#	is         => 'ro',
-#	isa        => 'HashRef[Num]',
-#	lazy_build => 1,
-#);
 
 has next_index => (
 	is         => 'rw',
@@ -25,6 +19,9 @@ has slot_count => (
 	lazy_build => 1,
 );
 
+# This was originally a builder for a lazy attribute, but it was built
+# too early (before all attributes existed), so I just do it on the fly
+# now. It would be nice if some of this could be memoized though.
 sub slot_to_index_map
 {
 	my $meta = shift;

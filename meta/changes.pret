@@ -13,3 +13,10 @@
 `MooseX-ArrayRef 0.003 cpan:TOBYINK`
 	issued  2012-09-04;
 	label   "This is not my day...".
+
+`MooseX-ArrayRef 0.004 cpan:TOBYINK`
+	issued  2012-09-04;
+	changeset [
+		item "Improved generated inline code."^^Change;
+	].
+

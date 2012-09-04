@@ -2,11 +2,10 @@ package MooseX::ArrayRef::Meta::Instance;
 
 BEGIN {
 	$MooseX::ArrayRef::Meta::Instance::AUTHORITY = 'cpan:TOBYINK';
-	$MooseX::ArrayRef::Meta::Instance::VERSION   = '0.003';
+	$MooseX::ArrayRef::Meta::Instance::VERSION   = '0.004';
 }
 
 use Moose::Role;
-use Moose::Util::MetaRole;
 use Scalar::Util qw( isweak weaken );
 
 use constant EMPTY => \0;
@@ -84,6 +83,24 @@ override inline_slot_access => sub {
 	my ($meta, $instance, $slot_name) = @_;
 	my $i = $meta->slot_index($slot_name);
 	$instance."->[$i]"
+};
+
+override inline_get_slot_value => sub {
+	my ($meta, $instance, $slot_name) = @_;
+	my $get = $meta->inline_slot_access($instance, $slot_name);
+	sprintf('do { no warnings; %s == MooseX::ArrayRef::Meta::Instance::EMPTY ? undef : %s }', $get, $get);
+};
+
+override inline_deinitialize_slot => sub {
+	my ($meta, $instance, $slot_name) = @_;
+	my $get = $meta->inline_slot_access($instance, $slot_name);
+	sprintf('%s = MooseX::ArrayRef::Meta::Instance::EMPTY', $get);
+};
+
+override inline_is_slot_initialized => sub {
+	my ($meta, $instance, $slot_name) = @_;
+	my $get = $meta->inline_slot_access($instance, $slot_name);
+	sprintf('do { no warnings; %s != MooseX::ArrayRef::Meta::Instance::EMPTY }', $get);
 };
 
 1;
