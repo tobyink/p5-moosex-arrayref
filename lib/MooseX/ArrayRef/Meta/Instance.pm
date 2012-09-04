@@ -1,15 +1,20 @@
 package MooseX::ArrayRef::Meta::Instance;
 
+BEGIN {
+	$MooseX::ArrayRef::Meta::Instance::AUTHORITY = 'cpan:TOBYINK';
+	$MooseX::ArrayRef::Meta::Instance::VERSION   = '0.001';
+}
+
 use Moose::Role;
 use Moose::Util::MetaRole;
 use Scalar::Util qw( isweak weaken );
 
 use constant EMPTY => \0;
 
-# Delegated certain methods to the metaclass
+# Delegate certain methods to the metaclass
 BEGIN {
 	no strict 'refs';
-	foreach my $m (qw(slot_index slot_count))
+	foreach my $m (qw( slot_index slot_count ))
 	{
 		*$m = sub {
 			my $meta = shift;
@@ -82,3 +87,4 @@ override inline_slot_access => sub {
 };
 
 1;
+

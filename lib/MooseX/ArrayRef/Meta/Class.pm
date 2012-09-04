@@ -1,5 +1,10 @@
 package MooseX::ArrayRef::Meta::Class;
 
+BEGIN {
+	$MooseX::ArrayRef::Meta::Class::AUTHORITY = 'cpan:TOBYINK';
+	$MooseX::ArrayRef::Meta::Class::VERSION   = '0.001';
+}
+
 use Moose::Role;
 
 #has slot_to_index_map => (
