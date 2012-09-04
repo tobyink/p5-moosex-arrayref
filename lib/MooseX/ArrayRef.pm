@@ -82,7 +82,7 @@ Objects implemented with arrayrefs rather than hashrefs are often faster than
 those implemented with hashrefs. Moose's default object implementation is
 hashref based. Can we go faster?
 
-Simply C<< use MooseX::ArrayRef> instead of C<< use Moose >>, but note the
+Simply C<< use MooseX::ArrayRef >> instead of C<< use Moose >>, but note the
 limitations in the section below.
 
 The current implementation is mostly a proof of concept, but it does mostly
