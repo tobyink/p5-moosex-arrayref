@@ -1,0 +1,8 @@
+# This file provides instructions for packaging.
+
+`MooseX-ArrayRef`
+	perl_version_from m`MooseX::ArrayRef`;
+	version_from      m`MooseX::ArrayRef`;
+	readme_from       m`MooseX::ArrayRef`;
+	test_requires     p`Test::More 0.61`  .
+
