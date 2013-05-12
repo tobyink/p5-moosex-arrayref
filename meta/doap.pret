@@ -7,7 +7,7 @@
 	:shortdesc            "blessed arrayrefs with Moose";
 	:homepage             <https://metacpan.org/release/MooseX-ArrayRef>;
 	:download-page        <https://metacpan.org/release/MooseX-ArrayRef>;
-	:repository           [ a :HgRepository; :browse <https://bitbucket.org/tobyink/p5-moosex-arrayref> ];
+	:repository           [ a :GitRepository; :browse <https://github.com/tobyink/p5-moosex-arrayref> ];
 	:bug-database         <http://rt.cpan.org/Dist/Display.html?Queue=MooseX-ArrayRef>;
 	:created              2012-09-04;
 	:license              <http://dev.perl.org/licenses/>;
