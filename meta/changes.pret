@@ -20,3 +20,10 @@
 		item "Improved generated inline code."^^Change;
 	].
 
+
+`MooseX-ArrayRef 0.005 cpan:TOBYINK`
+	issued    2014-09-10;
+	changeset [
+		item "Switch to Dist::Inkt."^^Packaging;
+	].
+

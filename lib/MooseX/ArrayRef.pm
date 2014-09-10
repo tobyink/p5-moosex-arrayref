@@ -4,7 +4,7 @@ use 5.008;
 
 BEGIN {
 	$MooseX::ArrayRef::AUTHORITY = 'cpan:TOBYINK';
-	$MooseX::ArrayRef::VERSION   = '0.004';
+	$MooseX::ArrayRef::VERSION   = '0.005';
 }
 
 use Moose ();
